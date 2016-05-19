@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>rpi-led</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-toggle/css/bootstrap-toggle.css">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/bootstrap-toggle/js/bootstrap-toggle.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="bower_components/angularjs/angular.js"></script>
+</head>
+<body ng-app="rpiTemp">
+  <div class="container-fluid">
+
+    <div class="row" ng-controller="ledCtrl">
+      <div class="col-md-12">
+        <h3 class="panel-title">Controls</h3>
+        <div class="checkbox">
+          <label>
+            <input toggle-checkbox type="checkbox" data-onstyle="danger"
+                   ng-model="ledStatus" ng-change="onLedStatusChange(ledStatus)"/>
+            Red LED (GPIO-17)
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app/app.js"></script>
+  <script src="app/socket/socket.factory.js"></script>
+  <script src="app/led/led.controller.js"></script>
+  <script src="app/components/toggle-checkbox.directive.js"></script>
+</body>
+</html>
