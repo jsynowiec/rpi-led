@@ -2,4 +2,4 @@
 
 RaspberryPi LED controll with JavaScript 
 
-Sample (not tested) code that sould allow to controll LED connected to RPi board. Inspired by @kosamari #FrontTrends2016
+Sample (not tested) code that should allow to control an LED connected to RPi board. Inspired by @kosamari #FrontTrends2016
